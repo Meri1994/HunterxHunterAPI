@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyApi", "DummyApi\DummyApi.csproj", "{1A953E2B-0F07-43F8-89F6-107488BB6B80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DummyApi", "DummyApi\DummyApi.csproj", "{1A953E2B-0F07-43F8-89F6-107488BB6B80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prova", "ConsoleApp1\Prova.csproj", "{19AB64B4-B045-4BA3-91AA-0FB61FED2B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HunterxHunterAPI", "HunterxHunterAPI\HunterxHunterAPI.csproj", "{0D7B44F0-3E9D-4E49-9548-6259FDE43DDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1A953E2B-0F07-43F8-89F6-107488BB6B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A953E2B-0F07-43F8-89F6-107488BB6B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A953E2B-0F07-43F8-89F6-107488BB6B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19AB64B4-B045-4BA3-91AA-0FB61FED2B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19AB64B4-B045-4BA3-91AA-0FB61FED2B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19AB64B4-B045-4BA3-91AA-0FB61FED2B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19AB64B4-B045-4BA3-91AA-0FB61FED2B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D7B44F0-3E9D-4E49-9548-6259FDE43DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7B44F0-3E9D-4E49-9548-6259FDE43DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7B44F0-3E9D-4E49-9548-6259FDE43DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7B44F0-3E9D-4E49-9548-6259FDE43DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

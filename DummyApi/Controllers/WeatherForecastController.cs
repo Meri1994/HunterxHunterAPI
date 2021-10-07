@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DummyApi.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
+    [ApiController]  // Diciamo al progetto di considerare la classe wFC 
+    [Route("[controller]")] // Questo controller verrà raggiunto grazie al suo nome
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -16,24 +16,51 @@ namespace DummyApi.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        // private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        //public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        //{
+        //    _logger = logger;
+        //}
+
+        [HttpGet("get")]  // Attributi, sono delle classi che funziano in un certo modo, e risponde solo alle 
+                          // chiamate con /get,
+                          // cosi posso configurare lo specifico percorso a cui dovrà rispondere questo metodo
+
+        //public WeatherForecast Get()
+        //{
+
+        //    return new WeatherForecast { Summary = "Pippo", TemperatureC = 30 };
+
+        //   // return "Hello Word";  // restituisco un oggetto, esso poi verrà convertito nel formato jaison
+        //}
+
+        //List<string> nomi = new List<string> { "Mario", "Pippo", "Alessia" };
+        //EnvironmentVariableTarget lunghezzaNomi = nomi.Select(n => n.Length);
+        //foreach(var l in lunghezzaNomi)
+        //{
+        //        console.WriteLine(l);
+
+        //}
+
+
+        // SELECT  FA IN MODO DI GENERARE UN NUOVO INUMERABLE
+        // A PARTIRE DA UNO ESISTENTE, SFRUTTANDO LA LAMBDA EXPRESSION PASSATA COME
+        //PARAMETRO
+
+
+
+        public IActionResult Get()
         {
-            _logger = logger;
+            return Ok(new WeatherForecast { Summary = "Pippo", TemperatureC = 30 });
+
+
+
+
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
-        {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
     }
+
+
 }
+
