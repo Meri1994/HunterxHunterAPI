@@ -27,16 +27,33 @@ namespace HunterxHunterAPI.Controllers
 
         [HttpPost]
 
-        public bool AddNewChamp([FromBody] Personaggi Personaggio)
+        public bool AddPersonaggio([FromBody] Personaggi Personaggio)
         {
 
            return  _personaggiService.AddPersonaggio(Personaggio);
 
         }
 
+        [HttpGet("{id}")]
 
+        public Personaggi GetById ([FromRoute] int id)
+        {
+            return _personaggiService.GetById(id);
+        }
 
+        [HttpDelete]
+        public bool DeletePersonaggio ([FromRoute] int id)
+        {
+            return _personaggiService.DeletePersonaggio(id);
+              
+        }
 
+        [HttpPut("{id}")]
+
+        public bool  UpdatePersonaggio([FromRoute] int id, [FromRoute]  Personaggi p)
+        {
+            return _personaggiService.UpdatePersonaggio(id, p);
+        }
 
     }
 }
